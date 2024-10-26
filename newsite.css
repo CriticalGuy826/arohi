@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+}
+.sliderr {
+    color: darkmagenta;
+    
+}
+
+@keyframes slide {
+    0% {
+    transform: translateX(100%);   
+    }
+    100% {
+    transform: translateX(-100%);  
+    }
+}
