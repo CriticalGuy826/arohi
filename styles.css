@@ -1,0 +1,158 @@
+/* Reset and general styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6D83F2, #A68DF3, #9CB6F3);
+    animation: gradientBG 15s ease infinite;
+    background-size: 300% 300%;
+    color: #333;
+}
+
+/* Animated background gradient */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container styling */
+.signup_div {
+    background: #fff;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease;
+}
+
+/* Heading */
+.signup_div h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Input fields */
+.signup_div input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    outline: none;
+    background: #f9f9f9;
+    font-weight: bold;
+}
+
+.signup_div input:focus {
+    border-color: #a1c4fd;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Red border on error */
+.signup_div input.error {
+    border-color: #ff4d4d;
+}
+
+/* Button styling */
+.signup_div button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(118, 75, 162, 0.3);
+}
+
+.signup_div button:hover {
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(118, 75, 162, 0.4);
+}
+
+/* Divider styling */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #aaa;
+    font-size: 0.9rem;
+    margin: 1rem 0; /* Adds spacing around the divider */
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+    margin: 0 0.5rem; /* Space between line and "or" */
+}
+
+.divider span {
+    padding: 0 0.5rem;
+    color: #666;
+    font-weight: bold;
+}
+
+/* Error message styling */
+.error {
+    color: #ff4d4d; /* Red text */
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    display: block; /* Ensures it takes full width */
+}
+
+/* Google Sign-in styling */
+.g_id_signin, #g_id_onload {
+    display: block;
+    margin: 1rem auto 0;
+    transform-origin: center;
+    border-radius: 12px;
+    background: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .signup_div {
+        padding: 1.5rem;
+    }
+    .signup_div h2 {
+        font-size: 1.75rem;
+    }
+}
